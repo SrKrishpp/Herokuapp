@@ -14,8 +14,8 @@ import java.time.Duration;
 import java.util.List;
 
 public class Haukhome {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    WebDriver driver;
+    WebDriverWait wait;
     Duration timeout = Duration.ofSeconds(10);
     @BeforeClass
     public void setUp() {
