@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Compile') {
+            steps {
+                sh 'javac Haukhome.java CheckBox.java HeroBasicAuth.java BrokenImg.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                
+                sh 'java Haukhome'
+		sh 'java HeroBasicAuth'
+		sh 'java BrokenImg'
+                sh 'java CheckBox'
+		
+            }
+        }
+    }
+}
